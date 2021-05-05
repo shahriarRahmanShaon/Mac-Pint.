@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		00393B552642861000BFFB7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393B542642861000BFFB7B /* ContentView.swift */; };
 		00393B572642861200BFFB7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00393B562642861200BFFB7B /* Assets.xcassets */; };
 		00393B5A2642861200BFFB7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00393B592642861200BFFB7B /* Preview Assets.xcassets */; };
+		00393B662642877D00BFFB7B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393B652642877D00BFFB7B /* Home.swift */; };
+		00393B692642886300BFFB7B /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393B682642886300BFFB7B /* BlurView.swift */; };
+		00393B6C26428D8B00BFFB7B /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00393B6B26428D8B00BFFB7B /* TabButton.swift */; };
+		00873F8A2642EA79000E0CBD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 00873F892642EA79000E0CBD /* SDWebImageSwiftUI */; };
+		00873F902642EC2F000E0CBD /* imagePicking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00873F8F2642EC2F000E0CBD /* imagePicking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,10 @@
 		00393B592642861200BFFB7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00393B5B2642861200BFFB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00393B5C2642861200BFFB7B /* Mac_Pint_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mac_Pint_.entitlements; sourceTree = "<group>"; };
+		00393B652642877D00BFFB7B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		00393B682642886300BFFB7B /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		00393B6B26428D8B00BFFB7B /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		00873F8F2642EC2F000E0CBD /* imagePicking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00873F8A2642EA79000E0CBD /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				00393B522642861000BFFB7B /* Mac_Pint_App.swift */,
-				00393B542642861000BFFB7B /* ContentView.swift */,
+				00873F8E2642EAC1000E0CBD /* ViewModels */,
+				00873F8C2642EAAA000E0CBD /* Models */,
+				00393B632642875E00BFFB7B /* Views */,
 				00393B562642861200BFFB7B /* Assets.xcassets */,
 				00393B5B2642861200BFFB7B /* Info.plist */,
 				00393B5C2642861200BFFB7B /* Mac_Pint_.entitlements */,
@@ -69,6 +81,32 @@
 				00393B592642861200BFFB7B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		00393B632642875E00BFFB7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				00393B542642861000BFFB7B /* ContentView.swift */,
+				00393B652642877D00BFFB7B /* Home.swift */,
+				00393B682642886300BFFB7B /* BlurView.swift */,
+				00393B6B26428D8B00BFFB7B /* TabButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00873F8C2642EAAA000E0CBD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		00873F8E2642EAC1000E0CBD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				00873F8F2642EC2F000E0CBD /* imagePicking.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +125,9 @@
 			dependencies = (
 			);
 			name = "Mac Pint.";
+			packageProductDependencies = (
+				00873F892642EA79000E0CBD /* SDWebImageSwiftUI */,
+			);
 			productName = "Mac Pint.";
 			productReference = 00393B4F2642861000BFFB7B /* Mac Pint..app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 00393B462642861000BFFB7B;
+			packageReferences = (
+				00873F882642EA79000E0CBD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 00393B502642861000BFFB7B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,7 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00393B552642861000BFFB7B /* ContentView.swift in Sources */,
+				00393B692642886300BFFB7B /* BlurView.swift in Sources */,
+				00393B662642877D00BFFB7B /* Home.swift in Sources */,
+				00393B6C26428D8B00BFFB7B /* TabButton.swift in Sources */,
 				00393B532642861000BFFB7B /* Mac_Pint_App.swift in Sources */,
+				00873F902642EC2F000E0CBD /* imagePicking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00873F882642EA79000E0CBD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00873F892642EA79000E0CBD /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00873F882642EA79000E0CBD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00393B472642861000BFFB7B /* Project object */;
 }
